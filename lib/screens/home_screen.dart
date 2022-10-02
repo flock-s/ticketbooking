@@ -7,6 +7,7 @@ import 'package:gap/gap.dart';
 
 import '../utils/app_info_list.dart';
 import '../utils/app_style.dart';
+import '../widgets/double_text_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -67,24 +68,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 const Gap(40),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Upcoming Flights",
-                      style: Styles.headlineStyle2,
-                    ),
-                    InkWell(
-                        onTap: (){
-
-                        },
-                        child: Text(
-                          "View all",
-                          style: Styles.textStyle.copyWith(color: Styles.primaryColor),
-                        ))
-                  ],
-                )
-
+                const AppDoubleTextWidget(title: 'Upcoming Flights',inkWellTitle: 'View all',)
               ],
             ),
           ),
@@ -99,23 +83,7 @@ class HomeScreen extends StatelessWidget {
           const Gap(10),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Hotels",
-                  style: Styles.headlineStyle2,
-                ),
-                InkWell(
-                    onTap: (){
-
-                    },
-                    child: Text(
-                      "View all",
-                      style: Styles.textStyle.copyWith(color: Styles.primaryColor),
-                    ))
-              ],
-            ),
+            child: const AppDoubleTextWidget(title: 'Hotels',inkWellTitle: 'View all',),
           ),
           const Gap(10),
           SingleChildScrollView(
